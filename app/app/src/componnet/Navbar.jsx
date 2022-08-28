@@ -37,7 +37,7 @@ const useStyles = makeStyles(theme => ({
             backgroundColor: alpha(theme.palette.common.white, 0.25),
         },
         borderRadius: theme.shape.borderRadius,
-        width: "50%",
+        width: "70%",
         [theme.breakpoints.down('sm')]: {
             display: (props) => props.open ? "flex" : "none"
         },
@@ -51,6 +51,11 @@ const useStyles = makeStyles(theme => ({
         [theme.breakpoints.up('sm')]: {
             display: (props) => "none"
         },
+    },
+    Cancel: {
+        [theme.breakpoints.up('sm')]: {
+            display: "none"
+        }
     },
     icons: {
 
@@ -67,7 +72,7 @@ function Navbar() {
     const [open, setOpen] = useState(false)
     const classes = useStyles({ open })
     return (
-        <AppBar>
+        <AppBar position='fixed'>
 
             <Toolbar className={classes.Toolbar}>
                 <Typography variant='h6' className={classes.logoLg}>Lama Dev</Typography>
