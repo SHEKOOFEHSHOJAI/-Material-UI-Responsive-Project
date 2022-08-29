@@ -6,6 +6,9 @@ const useStyle = makeStyles((theme) => ({
     },
     media: {
         height: 250,
+        [theme.breakpoints.down("sm")]: {
+            height: 150,
+        }
     },
     card: {
         marginBottom: theme.spacing(5)

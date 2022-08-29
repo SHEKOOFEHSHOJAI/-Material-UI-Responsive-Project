@@ -7,6 +7,7 @@ import LeftBar from './componnet/Leftbar';
 import RightBar from './componnet/Rightbar';
 import Grid from '@material-ui/core/Grid';
 import Feed from './componnet/Feed'
+import Add from './componnet/Add';
 const useStyles = makeStyles(theme => ({
   // button:{
   //   // color:"white",
@@ -39,6 +40,8 @@ function App() {
           <RightBar />
         </Grid>
       </Grid>
+
+      <Add />
     </div>
   )
 
