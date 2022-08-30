@@ -3,7 +3,7 @@ import { Add as AddIcon } from "@material-ui/icons";
 import React from "react";
 import { useState } from "react";
 import Radio from '@material-ui/core/Radio';
-import MuiAlert from '@material-ui/lab/Alert';
+import MuiAlert from "@material-ui/lab/Alert";
 import Post from './Post'
 const useStyle = makeStyles((theme) => ({
     Fab: {
@@ -31,7 +31,14 @@ const useStyle = makeStyles((theme) => ({
         item: {
             marginBottom: theme.spacing(3)
         }
+
+
+    },
+    Alert: {
+        backgroundColor: "#58ab47"
     }
+
+
 }))
 
 
@@ -43,6 +50,10 @@ const Add = () => {
     const classes = useStyle()
     const [open, setOpen] = useState(false)
     const [openAlert, setOpenAlert] = useState(false)
+
+    // const handleClick = () => {
+    //     setOpen(true);
+    // };
 
     const handleClose = (event, reason) => {
         if (reason === 'clickaway') {
@@ -114,8 +125,8 @@ const Add = () => {
 
             {/* snack */}
 
-            <Snackbar open={openAlert} autoHideDuration={6000} onClose={handleClose}>
-                <Alert onClose={handleClose} severity="success">
+            <Snackbar open={openAlert} autoHideDuration={4000} anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }} onClose={handleClose}>
+                <Alert onClose={handleClose} className={classes.Alert} severity="success">
                     This is a success message!
                 </Alert>
             </Snackbar>
